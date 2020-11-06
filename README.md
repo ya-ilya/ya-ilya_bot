@@ -1,2 +1,2 @@
-# ya-ilya_bot
+# ya-ilya bot
 discord.js bot
