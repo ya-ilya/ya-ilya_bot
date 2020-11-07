@@ -1,0 +1,28 @@
+{
+  "name": "ya-ilya-bot",
+  "version": "1.0.0",
+  "description": "ya-ilya bot",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.4.1",
+    "fs": "^0.0.1-security",
+    "minecraft-server-util": "^3.1.0",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "snekfetch": "^4.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ya-ilya/ya-ilya_bot.git"
+  },
+  "author": "ya-ilya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ya-ilya/ya-ilya_bot/issues"
+  },
+  "homepage": "https://github.com/ya-ilya/ya-ilya_bot#readme"
+}
