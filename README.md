@@ -6,4 +6,10 @@
  - Download [node.js](https://nodejs.org/en/)
  - Open a terminal and write npm i
  - Then write npm i discord.js
- - To start the bot itself, you need to enter node index.js
+ - Before starting the bot, you need to insert the token in the file config.json
+ -     ```javascript
+ {
+    "prefix": "!",
+    "token": "TOKEN-HERE"
+ }
+    ```
