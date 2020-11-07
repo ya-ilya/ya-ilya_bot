@@ -10,3 +10,5 @@
  - Before starting the bot, you need to insert the token in the file config.json
  ---
  - Аfter all the actions go to the terminal and enter `node index.js`
+ ### Thank them all very much
+ - [Daniyar Kurmangaliiev](https://www.youtube.com/channel/UCP_7rWQRKPn-hrScLtZdvDg) for a wonderful guide to discord.js
