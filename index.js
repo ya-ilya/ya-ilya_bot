@@ -38,4 +38,5 @@ client.on('message', msg => {
   }
 });
 
-client.login('TOKEN-HERE'); //bot token
+let token = config.token
+client.login(token); //bot token
