@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const mc = require("minecraft-server-util");
 
 module.exports.run = async (client, msg, args) => {
     const checkmemb = msg.guild.member(msg.author);
