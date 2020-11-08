@@ -22,6 +22,8 @@ module.exports.run = async (client, msg, args) => {
         .setAuthor(`🆘 !help fun`)
         .addField('!coinflip <heads/tails>', `💵 Flip a coin`, false)
         .addField('!8ball <question>', `❓ Ask a question about this strange ball`, false)
+        .addField('!mcserver <ip>', `💾 Shows info about the minecraft server`, false)
+        .addField('!mcskin <nickname>', `📡 sends the player's minecraft skin`, false)
         .setColor(0x32d160)
         await msg.channel.send(embed)
     } else if (args == `moderator`) {
