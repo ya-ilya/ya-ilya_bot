@@ -3,6 +3,7 @@ const fs = require('fs');
 const client = new Discord.Client();
 const config = require('./config.json')
 client.commands = new Discord.Collection()
+const logchannel = `775286175853707265` //log channel id. if you don't need logs ignore this
 
 fs.readdir('./commands', (err, files) => {
     if(err) console.log(err)
@@ -36,6 +37,31 @@ client.on('message', msg => {
   if (msg.content.startsWith(prefix + "ping")) {
     msg.reply('Pong!');
   }
+});
+
+//SIMPLE EVENTS.
+//They are very easy to make. go to the site https://discord.js.org/#/docs/main/stable/class/Client and look at the event column
+
+//EVENT ROLE DELETE
+client.on('roleDelete', function(role) {
+  let embed = new Discord.MessageEmbed()
+  .setAuthor(`Logs`)
+  .addField(`Role log`, 'Role `' + role.name + '` has been removed', true)
+  .setThumbnail(`https://i.gifer.com/7L6q.gif`)
+  .setColor(0x32d160)
+  client.channels.cache.get(`${logchannel}`).send(embed);
+});
+
+//EVENT ROLE UPDATE
+client.on('roleUpdate', function(oldRole, newRole) {
+  let embed = new Discord.MessageEmbed()
+  .setAuthor(`Logs`)
+  .addField(`Role log`, 'the role has been updated', true)
+  .addField(`Old name`, `${oldRole.name}`, false) //Old role name
+  .addField(`New name`, `${newRole.name}`, false) //New role name
+  .setThumbnail(`https://media1.tenor.com/images/70ecbf36cd9cf9f23efaba96afc46cbc/tenor.gif?itemid=18284635`) //I didn't find a normal GIF. You can insert your own here
+  .setColor(0x32d160)
+  client.channels.cache.get(`${logchannel}`).send(embed);
 });
 
 let token = config.token
