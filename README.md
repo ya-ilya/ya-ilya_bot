@@ -2,7 +2,8 @@
 ### Info
 > Discord bot written in discord.js <br>
 ---
-> I did almost everything myself
+> I did almost everything myself <br>
+> This bot has basic commands and events. Then try it yourself 😇
 ### Usage
  - Download [node.js](https://nodejs.org/en/)
  - Open the terminal in the bot folder and enter `npm i discord.js` and `npm i node-fetch`
