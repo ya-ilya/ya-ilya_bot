@@ -22,5 +22,8 @@
  - serverinfo
  - userinfo
  - botinfo
+ ### Events
+ - Role Delete
+ - Role Update
  ### Thank them all very much
  - [Daniyar Kurmangaliiev](https://www.youtube.com/channel/UCP_7rWQRKPn-hrScLtZdvDg) for a wonderful guide to discord.js
