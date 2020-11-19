@@ -7,6 +7,7 @@ module.exports.run = async (client, msg, args) => {
     .addField('!help commands', `🥱 Commands`, true)
     .addField('!help moderator', `🗡️ Moderator commands`, true)
     .addField('!help fun', `😋 Fun commands`, true)
+    .addField('!help music', `🎼 Music commands`, true)
     .setColor(0x32d160)
     await msg.channel.send(embed)
     }else if (args == `commands`) {
@@ -33,6 +34,18 @@ module.exports.run = async (client, msg, args) => {
         .addField('!kick <user>', `🦶 Kick the user`, false)
         .addField('!mute <user>', `🥶 Mute the user `, false)
         .addField('!unmute <user>', `🥵 Unmute the user`, false)
+        .setColor(0x32d160)
+        await msg.channel.send(embed)
+    }else if (args == `music`) {
+        let embed = new Discord.MessageEmbed()
+        .setAuthor(`🆘 !help music`)
+        .addField('!play <name / url>', `Start playing music`, false)
+        .addField('!stop', `Stop the music`, false)
+        .addField('!fs', `Skip the music `, false)
+        .addField('!pause', `Adjust your music`, false)
+        .addField('!resume', `To continue the music`, false)
+        .addField('!volume <number>', `Set the sound volume`, false)
+        .addField('!queue', `To look at the music in the queue`, false)
         .setColor(0x32d160)
         await msg.channel.send(embed)
     }else {

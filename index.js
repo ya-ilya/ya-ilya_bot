@@ -5,6 +5,8 @@ const config = require('./config.json')
 client.commands = new Discord.Collection()
 const logchannel = `775286175853707265` //log channel id. if you don't need logs ignore this
 
+client.queue = new Map();
+
 fs.readdir('./commands', (err, files) => {
     if(err) console.log(err)
 
