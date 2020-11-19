@@ -23,7 +23,7 @@
  - serverinfo
  - userinfo
  - botinfo
- ## Music Commands
+ #### Music Commands
  - play
  - stop
  - skip
