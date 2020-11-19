@@ -23,6 +23,14 @@
  - serverinfo
  - userinfo
  - botinfo
+ ## Music Commands
+ - play
+ - stop
+ - skip
+ - pause
+ - resume
+ - volume
+ - queue
  ### Events
  - Role Delete
  - Role Update
