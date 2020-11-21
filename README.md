@@ -31,7 +31,7 @@
  - resume
  - volume
  - queue
- ### Economy Commands
+ #### Economy Commands
  - balance
  - work
  - deposit
