@@ -8,6 +8,7 @@ module.exports.run = async (client, msg, args) => {
     .addField('!help moderator', `🗡️ Moderator commands`, true)
     .addField('!help fun', `😋 Fun commands`, true)
     .addField('!help music', `🎼 Music commands`, true)
+    .addField('!help economy', `💵 Economy commands`, true)
     .setColor(0x32d160)
     await msg.channel.send(embed)
     }else if (args == `commands`) {
@@ -46,6 +47,20 @@ module.exports.run = async (client, msg, args) => {
         .addField('!resume', `To continue the music`, false)
         .addField('!volume <number>', `Set the sound volume`, false)
         .addField('!queue', `To look at the music in the queue`, false)
+        .setColor(0x32d160)
+        await msg.channel.send(embed)
+    }else if (args == `economy`) {
+        let embed = new Discord.MessageEmbed()
+        .setAuthor(`🆘 !help economy`)
+        .addField('!balance', `Check your balance`, false)
+        .addField('!work', `To go to make money`, false)
+        .addField('!dep <all/amount>', `Deposit money in the Bank`, false)
+        .addField('!withdraw <all/amount>', `Withdraw money from the Bank`, false)
+        .addField('!rob <user>', `Rob a man`, false)
+        .addField('!add-money <user> <amount>', `Add money to the user`, false)
+        .addField('!remove-money <user> <amount>', `To remove money from the user`, false)
+        .addField('!salary', `Gives you a salary if you have a specific role`, false)
+        .addField('!pay <user> <amount>', `Transfer money to another user`, false)
         .setColor(0x32d160)
         await msg.channel.send(embed)
     }else {

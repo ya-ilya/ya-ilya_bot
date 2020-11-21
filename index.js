@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const config = require('./config.json')
 client.commands = new Discord.Collection()
 const logchannel = `775286175853707265` //log channel id. if you don't need logs ignore this
+const db = require('quick.db')
 
 client.queue = new Map();
 

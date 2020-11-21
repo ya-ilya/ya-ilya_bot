@@ -31,6 +31,16 @@
  - resume
  - volume
  - queue
+ ### Economy Commands
+ - balance
+ - work
+ - deposit
+ - withdraw
+ - salary
+ - rob
+ - pay
+ - add-money
+ - remove-money
  ### Events
  - Role Delete
  - Role Update
