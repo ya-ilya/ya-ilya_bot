@@ -35,6 +35,7 @@ module.exports.run = async (client, msg, args) => {
         .addField('!kick <user>', `🦶 Kick the user`, false)
         .addField('!mute <user>', `🥶 Mute the user `, false)
         .addField('!unmute <user>', `🥵 Unmute the user`, false)
+		.addField('!clear <limit>', `To delete many messages`, false)
         .setColor(0x32d160)
         await msg.channel.send(embed)
     }else if (args == `music`) {
