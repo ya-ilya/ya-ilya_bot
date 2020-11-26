@@ -3,8 +3,10 @@ const fs = require('fs');
 const client = new Discord.Client();
 const config = require('./config.json')
 client.commands = new Discord.Collection()
-const logchannel = `775286175853707265` //log channel id. if you don't need logs ignore this
+const logchannel = `` //log channel id. if you don't need logs ignore this
 const db = require('quick.db')
+const DiscordRPC = require('discord-urpc');
+const uRPC = new DiscordRPC({ clientID: '770678007538122786', debug: false });
 
 client.queue = new Map();
 
@@ -23,6 +25,7 @@ fs.readdir('./commands', (err, files) => {
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setActivity(`for ${client.guilds.cache.size} server`,{ type: 'WATCHING'})
 });
 
 client.on('message', msg => {
@@ -41,6 +44,7 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
 });
+
 
 //SIMPLE EVENTS.
 //They are very easy to make. go to the site https://discord.js.org/#/docs/main/stable/class/Client and look at the event column
