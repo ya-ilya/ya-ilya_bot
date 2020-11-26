@@ -5,8 +5,6 @@ const config = require('./config.json')
 client.commands = new Discord.Collection()
 const logchannel = `` //log channel id. if you don't need logs ignore this
 const db = require('quick.db')
-const DiscordRPC = require('discord-urpc');
-const uRPC = new DiscordRPC({ clientID: '770678007538122786', debug: false });
 
 client.queue = new Map();
 
