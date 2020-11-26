@@ -2,12 +2,13 @@ const Discord = require('discord.js');
 
 //if an error occurs please contact here - https://github.com/ya-ilya/ya-ilya_bot/issues
 
-module.exports.run = async (client, msg, args) => { 
+module.exports.run = async (client, msg, args) => {
+    let amount = args[0] % 100
     const checkmemb = msg.guild.member(msg.author);
     if (checkmemb.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS'])) {
         if (args != ``) {
-            if (args[0] > 0) {
-                msg.channel.bulkDelete(args[0])
+            if (amount > 0) {
+                msg.channel.bulkDelete(amount)
                 let embed = new Discord.MessageEmbed()
                 .setAuthor(`Clear`)
                 .setDescription("✅ `" + `${msg.author.tag}` + "`" + ` deleted` + " `" + `${args[0]}` + "`" + ` messages in this channel`)
