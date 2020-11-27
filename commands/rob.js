@@ -10,6 +10,8 @@ module.exports.run = async (client, msg, args) => {
     let robTimeout = await db.fetch(`robTimeout_${msg.guild.id}_${msg.author.id}`);
     let ment = msg.mentions.members.first();
     let User = msg.mentions.users.first();
+    if (msg.author.bot) return;
+    if (ment.bot) return msg.channel.send("you can't rob a bot!")
     if (!ment) {
         let embed = new Discord.MessageEmbed()
         .setAuthor(`${msg.author.tag}`, `${msg.author.displayAvatarURL()}`)
