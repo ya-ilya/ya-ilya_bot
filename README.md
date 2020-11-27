@@ -41,6 +41,3 @@
  - pay
  - add-money
  - remove-money
- ### Events
- - Role Delete
- - Role Update
