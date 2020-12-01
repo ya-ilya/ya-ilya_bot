@@ -2,10 +2,16 @@ const Discord = require('discord.js');
 const db = require('quick.db')
 
 module.exports.run = async (client, msg, args) => {
-    let User = msg.mentions.users.first()
+    let totalCash = db.fetch(`money_${msg.guild.id}_${msg.author.id}`)
+    if (totalCash <= 0) {
+        let embed = new Discord.MessageEmbed()
+        .setAuthor(`${msg.author.tag}`, `${msg.author.displayAvatarURL()}`)
+        .setDescription('❌ `You dont have any money to deposit.`\n')
+        .setColor(0xff0000)
+        return msg.channel.send(embed)
+    }
     if (args != '') {
         if (args[0] === "all") {
-            let totalCash = db.fetch(`money_${msg.guild.id}_${msg.author.id}`)
 
             if(totalCash == 0) return msg.reply("You don't have that much in hand")
 
