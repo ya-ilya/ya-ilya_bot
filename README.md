@@ -9,18 +9,21 @@
  - Before starting the bot, you need to insert the token in the file [config.json](https://github.com/ya-ilya/ya-ilya_bot/blob/main/config.json)
  - Аfter all the actions go to the terminal and enter `node index.js`
  ### Commands
+ #### Moderator Commands
  - ban
  - kick
  - mute
  - unmute
- - mcserver
- - mcskin
- - 8ball
- - coinflip
+ #### Info commands
  - help
  - serverinfo
  - userinfo
  - botinfo
+ #### Fun commands
+ - mcserver
+ - mcskin
+ - 8ball
+ - coinflip
  #### Music Commands
  - play
  - stop
