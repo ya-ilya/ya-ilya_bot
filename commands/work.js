@@ -21,7 +21,7 @@ module.exports.run = async (client, msg, args) => {
         db.add(`money_${msg.guild.id}_${msg.author.id}`, payment);
         db.set(`work_${msg.guild.id}_${msg.author.id}`, Date.now());
         let embed = new Discord.MessageEmbed()
-        .setAuthor(`work`)
+        .setAuthor(`${msg.author.tag}`, `${msg.author.displayAvatarURL()}`)
         .setDescription(randomMessage)
         .setColor(0x32d160)
         await msg.channel.send(embed)

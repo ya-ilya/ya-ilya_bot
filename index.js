@@ -34,7 +34,7 @@ client.on('message', msg => {
   if (msg.author.bot) return;
 
   if (msg.content.startsWith(prefix)) {
-    let command_file = client.commands.get(command.slice(prefix.length))
+    let command_file = client.commands.get(command.slice(prefix.length).toLowerCase())
     if (command_file) command_file.run(client, msg, args)
   }
 

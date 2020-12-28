@@ -15,7 +15,7 @@ module.exports.run = async (client, msg, args) => {
     if (user.id == msg.author.id) {
         let embed = new Discord.MessageEmbed()
         .setAuthor(`${msg.author.tag}`, `${msg.author.displayAvatarURL()}`)
-        .setDescription(':x:` You cant transfer money to yourself`')
+        .setDescription('❌` You cant transfer money to yourself`')
         .setColor(0xff0000)
         return msg.channel.send(embed)
     }

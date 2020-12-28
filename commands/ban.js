@@ -6,24 +6,28 @@ module.exports.run = async (client, msg, args) => {
     if (checkmemb.hasPermission(['KICK_MEMBERS', 'BAN_MEMBERS'])) {
     if (args == ``) {
         let embed = new Discord.MessageEmbed()
-        .setAuthor(`Error`)
-        .addField('Сommand entered incorrectly', `Use !ban <user> <days> <reason>`, true)
-        .setColor(0x32d160)
+        .setAuthor(`${msg.author.tag}`, `${msg.author.displayAvatarURL()}`)
+        .setDescription('❌ `Not enough arguments `\n')
+        .addField("Usage:", '`!ban <user> <days> <reason>`', false)
+        .setColor(0xFF0000)
         await msg.channel.send(embed)
     }else if (args != ``) {
-        let person = msg.guild.member(msg.mentions.users.first() || msg.guild.members.fetch(args[1]))
-        if (!args[1]) return;
+        let person = msg.guild.member(msg.mentions.users.first() || msg.guild.members.fetch(args[0]))
+        if (!person) return;
         if (!args[2]) {
-            reason = `Is not available`
-        }else if (args[3] != ``) {
-            reason = `${args[2]}`
+            var reason = `Is not available`
+        }else if (args[2] != ``) {
+            let array = args.slice(2)
+            let prereason = `${array}`
+            var reason = prereason.replace(`,`, ` `)
         }
+        let adays = args[1].replace(`d`, ``);
         let embed = new Discord.MessageEmbed()
-        .setAuthor(`!ban`)
-        .addField(`User ${person.nickname} has been baned`, `Reason: ${reason}, Days: ${args[1]}`, true)
+        .setAuthor(`${msg.author.tag}`, `${msg.author.displayAvatarURL()}`)
+        .addField(`User ${person.displayName} has been baned`, `Reason: ${reason}, Days: ${adays}`, true)
         .setColor(0x32d160)
         await msg.channel.send(embed)
-        person.ban({ days: args[1], reason: `${args[2]}` })
+        person.ban({ days: adays, reason: `${reason}` })
     }
 }else {
     msg.channel.send(`You don't have the rights to execute this command`)
